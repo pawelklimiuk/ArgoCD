@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: pawelk123456/backend:latest
+        image: pawelk123456/backend:RC-11.99f5fd7
         ports:
         - containerPort: 5001
