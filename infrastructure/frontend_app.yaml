@@ -3,14 +3,15 @@ kind: Application
 metadata:
   name: frontend
   namespace: argocd
-project: default
-source:
-  repoURL: 'https://github.com/pawelklimiuk/ArgoCD'
-  path: frontend
-  targetRevision: main
-destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: argocd
-syncPolicy:
-  syncOptions:
-    - CreateNamespace=true
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/pawelklimiuk/ArgoCD'
+    path: frontend
+    targetRevision: main
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
